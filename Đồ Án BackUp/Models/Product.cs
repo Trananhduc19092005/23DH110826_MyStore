@@ -11,7 +11,8 @@ namespace Đồ_Án_BackUp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,6 +26,8 @@ namespace Đồ_Án_BackUp.Models
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         public decimal ProductPrice { get; set; }
+
+        public int index;
         public string ProductImage { get; set; }
     
         public virtual Category Category { get; set; }

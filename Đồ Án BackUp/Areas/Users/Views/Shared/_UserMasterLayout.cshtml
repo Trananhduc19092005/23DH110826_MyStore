@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -10,113 +9,86 @@
 </head>
 <body>
     <style>
-        *
-        {
+        *{
             margin : 0;
             padding : 0;
-        }
-        .header-container {
-            background: #FC5E31;
+            box-sizing : border-box;
         }
 
-        img
-        {
-            width : 120px;
+        .header-Phone-number-UserAccount-ShoppingCart {
+            padding: 0 10px;
         }
 
-        .nav-item
-        {
-            margin : 10px 20px;
+        .UserAccount {
+            margin: 0 20px;
         }
 
-        .selection 
+        .test a {
+            margin: 0 5px;
+        }   
+
+        nav
         {
-            margin : 0 10px;
+            padding : 0 20px;
         }
-        
     </style>
-    
-    <div class="header-container">
-        <div class="container">
-            <header class="d-flex flex-column position-sticky top-0">
-                <div class="d-flex justify-content-between header">
-                    <div class="header-left d-flex p-3">
-                        @Html.ActionLink("Kênh Người Bán", "", "", new { @class = "text-decoration-none m-2 text-light" })
-                        @Html.ActionLink("Tải Ứng Dụng", "", "", new { @class = "text-decoration-none m-2 text-light" })
-                        <div class="header-left-connect m-2">
-                            @Html.ActionLink("Kết Nối", "", "", new { @class = "text-decoration-none text-light" })
-                            <a class="text-decoration-none text-light" href="##">  <i class="fa-brands fa-facebook"></i> </a>
-                            <a class="text-decoration-none text-light" href="##"> <i class="fa-brands fa-instagram"></i> </a>
-                        </div>
-                    </div>
-                    <div class="icon d-flex p-3">
-                        <a href="##" class="text-decoration-none m-2 text-light">
-                            <i class="fa-solid fa-bell"></i>
-                            Thông Báo
-                        </a>
 
+    <div class="container-fluid">
+        <header>
+            <!-- Phone-number-UserAccount-ShoppingCart -->
 
-                        <a href="##" class="text-decoration-none text-light m-2">
-                            <i class="fa-solid fa-circle-question"></i>
-                            Hỗ Trợ
-                        </a>
-
-
-                        <div class="select d-flex text-light m-2">
-                            <a href="##" class="text-decoration-none text-light ">
-                                <i class="selection fa-solid fa-globe"></i>
-
-                            </a>
-
-                            <select class="form-select-sm">
-                                <option value="tiengviet">
-                                    Tiếng Việt
-                                </option>
-
-                                <option value="tienganh">
-                                    Tiếng Anh
-                                </option>
-                            </select>
-                        </div>
-
-                        <a href="##" class="text-decoration-none text-light m-2">
-                            <i class="fa-solid fa-user"></i>
-                            User_1
-                        </a>
-                    </div>
+            <div class="header-Phone-number-UserAccount-ShoppingCart d-flex justify-content-between mt-4 mb-3">
+                <div class="header-Phone-number-UserAccount-ShoppingCart Phone-number">
+                    <i class="fa-solid fa-phone"></i> 0914.370.300
                 </div>
 
-                <div class="logo_&&_nav d-flex justify-content-between">
-                    <div class="logo_&&_nav_left d-flex w-75">
-                        <div class="shoppe_logo">
-                            <img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-shopee-inkythuatso-2-01-24-14-52-10.jpg" />
-                        </div>
-
-                        <div class="search_&&_nav d-flex flex-column justify-content-center w-100" style="margin : 0 20px;">
-                            <form class="input-group">
-                                <input class="input-group w-100" placeholder="Search SomeThing" />
-                            </form>
-
-                            <nav class="nav">
-                                <a class="nav-item text-decoration-none text-light"> 123 </a>
-                                <a class="nav-item text-decoration-none text-light"> 123 </a>
-                                <a class="nav-item text-decoration-none text-light"> 123 </a>
-                                <a class="nav-item text-decoration-none text-light"> 123 </a>
-                            </nav>
-                        </div>
+                <div class="header-Phone-number-UserAccount-ShoppingCart UserAccount-ShoppingCart d-flex justify-content-around">
+                    <div class="UserAccount">
+                        <i class="fa-solid fa-user"></i> User
                     </div>
 
-                    <div class="shopping_cart d-flex  align-items-center text-white">
-                        <a class="text-white" href="##">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
+                    <div class="ShoppingCart">
+                        <i class="fa-solid fa-cart-shopping"></i> ShoppingCart
                     </div>
                 </div>
-            </header>
+            </div>
+
+            <!-- NavBar -->
+
+            <nav class="row row-cols-3">
+                <div class="col col-4 logo">
+                    <a href="/Users/Home2/Index" class="text-uppercase text-decoration-none text-dark">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </div>
+
+                <div class="col col-4 test text-center">
+                    @Html.ActionLink("Trang Chủ", "Index", "Home2", new { @class = "TrangChuBtn text-uppercase text-decoration-none  fs-6 btn btn-outline-primary" })
+                    @Html.ActionLink("Áo", "AoHomePage", "Home2", new { @class = "AoBtn text-uppercase text-decoration-none  fs-6 btn btn-outline-primary" })
+                    @Html.ActionLink("Quần", "QuanHomePage", "Home2", new { @class = "QuanBtn text-uppercase text-decoration-none  fs-6 btn btn-outline-primary" })
+                    @Html.ActionLink("Phụ Kiện", "PhuKienHomePage", "Home2", new { @class = "PhuKienBtn text-uppercase text-decoration-none  fs-6 btn btn-outline-primary" })
+                    @Html.ActionLink("Giày", "GiayDepHomePage", "Home2", new { @class = "GiayDepBtn text-uppercase text-decoration-none  fs-6 btn btn-outline-primary" })
+                </div>
+
+                <div class="col col-4 text-end">
+                    <a class="text-end text-dark" href="/Users/Home2/Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>                    
+                    </a>
+                </div>
+
+            </nav>
+        </header>
+
+        <div class="mt-4 mb-4">
+            @RenderBody()
         </div>
+
+        <hr />
+
+        <footer>
+            This Web Was Created By 23DH110826_TranAnhDuc
+        </footer>
     </div>
-    <div>
-        @RenderBody()
-    </div>
+    
 </body>
 </html>
